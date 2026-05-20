@@ -49,6 +49,7 @@ internal fun ProductsScreenContent(
 ) {
     var dialogToShow by remember { mutableStateOf<Dialog?>(null) }
     Scaffold(
+        modifier = Modifier,
         topBar = {
             Row(
                 modifier = Modifier
@@ -79,6 +80,7 @@ internal fun ProductsScreenContent(
     ) { paddingValues ->
         LazyColumn(
             modifier = Modifier
+                .testTag("ProductsLazyColumn")
                 .fillMaxSize()
                 .padding(paddingValues),
             verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -102,22 +104,22 @@ internal fun ProductsScreenContent(
                             Text(
                                 modifier = Modifier
                                     .testTag("Product name at $index"),
-                                text = "Name: ${item.name}"
+                                text = item.name
                             )
                             Text(
                                 modifier = Modifier
                                     .testTag("Product os at $index"),
-                                text = "Os: ${item.os}"
+                                text = item.os
                             )
                             Text(
                                 modifier = Modifier
                                     .testTag("Product ram at $index"),
-                                text = "Ram: ${item.ram}"
+                                text = item.ram.toString()
                             )
                             Text(
                                 modifier = Modifier
                                     .testTag("Product price at $index"),
-                                text = "Price: ${item.price}"
+                                text = item.price
                             )
                         }
                     }
