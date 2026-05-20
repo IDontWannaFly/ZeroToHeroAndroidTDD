@@ -8,6 +8,14 @@ import kotlinx.coroutines.launch
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import ru.easycode.zerotoheroandroidtdd.domain.ProductsRepository
+import ru.easycode.zerotoheroandroidtdd.domain.model.Product
+import ru.easycode.zerotoheroandroidtdd.domain.model.ProductFilter
+import ru.easycode.zerotoheroandroidtdd.ui.common.RunAsync
+import ru.easycode.zerotoheroandroidtdd.ui.products.ProductsViewModel
+import ru.easycode.zerotoheroandroidtdd.ui.products.dvo.FilterUi
+import ru.easycode.zerotoheroandroidtdd.ui.products.dvo.OrderUi
+import ru.easycode.zerotoheroandroidtdd.ui.products.dvo.ProductListUi
 
 class ProductsViewModelTest {
 
